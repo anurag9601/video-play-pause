@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Video play & pause extension",
+    "version": "0.0.1",
+    "background": {
+        "service_worker": "service-worker.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.youtube.com/*"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "*://www.youtube.com/*"
+    ],
+    "permissions": [
+        "tabs"
+    ]
+}
